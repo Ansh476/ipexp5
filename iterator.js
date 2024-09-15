@@ -14,7 +14,7 @@ function squareiterator(values) {
     };
 }
 
-var arr = [1, 2, 3, 4, 5];
+var arr = [3, 6, 20, 14, 9];
 var iterator = squareiterator(arr);
 
 console.log(iterator.next()); 
