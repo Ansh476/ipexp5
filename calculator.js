@@ -1,0 +1,44 @@
+console.log("Running calculator function...");
+
+function calculator(num1, num2, operation) {
+    return new Promise((resolve, reject) => {
+        console.log("Promise started...");
+
+        if (typeof num1 !== 'number' || typeof num2 !== 'number') {
+            reject("Both inputs must be numbers.");
+        }
+
+        switch (operation) {
+            case '+':
+                resolve(num1 + num2);
+                break;
+            case '-':
+                resolve(num1 - num2);
+                break;
+            case '*':
+                resolve(num1 * num2);
+                break;
+            case '/':
+                if (num2 === 0) {
+                    reject("Division by zero is not allowed.");
+                } else {
+                    resolve(num1 / num2);
+                }
+                break;
+            default:
+                reject(`Error: Invalid operation '${operation}'`);
+        }
+    });
+}
+
+calculator(10, 5, "/")
+    .then(result => {
+        console.log(`Result: ${result}`);
+    })
+    .catch(error => {
+        console.error(`Error: ${error}`);
+    });
+
+
+
+
