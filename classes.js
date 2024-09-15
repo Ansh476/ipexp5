@@ -40,10 +40,10 @@ const personLiteral = {
 personLiteral.printDetails(); 
 
 const Personobjcons = new Object();
-    Personobjcons.name="Arnold"
-    Personobjcons.age=50;
-    Personobjcons.weight=80;
-    Personobjcons["height"]=6.3
+    Personobjcons.name="Anish"
+    Personobjcons.age=60;
+    Personobjcons.weight=70;
+    Personobjcons["height"]=5.9
     Personobjcons.getFunction = function(){
         return "Name: "+this.name+" Age: "+this.age+" Weight: "+this.weight+" Height: "+this.height;
     }
