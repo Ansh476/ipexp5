@@ -1,9 +1,5 @@
-console.log("Running calculator function...");
-
 function calculator(num1, num2, operation) {
     return new Promise((resolve, reject) => {
-        console.log("Promise started...");
-
         if (typeof num1 !== 'number' || typeof num2 !== 'number') {
             reject("Both inputs must be numbers.");
         }
